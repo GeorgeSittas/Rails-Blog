@@ -1,1 +1,19 @@
 <h1>Hello, Rails!</h1>
+
+
+<!-- The following snippet is a mixture of HTML and ERB. ERB is a templating system
+     that evaluates Ruby code embedded in a document. Here, we can see two types of
+     ERB tags: <% %> and <%= %>. The <% %> tag means "evaluate the enclosed Ruby code."
+     The <%= %> tag means "evaluate the enclosed Ruby code, and output the value it
+     returns." Anything you could write in regular Ruby program can go inside these
+     ERB tags, though it's usually best to keep the contents of ERB tags short, for
+     readability.
+-->
+
+<ul>
+	<% @articles.each do |article| %> <!-- Don't want to output the returned value here -->
+		<li>
+			<%= article.title %> <!-- Want to output the returned value here, though! -->
+		</li>	
+	<% end %>
+</ul>
