@@ -1,4 +1,4 @@
-# README
+# Simple Rails Weblog
 
 This is a simple weblog app written in Ruby on Rails. The purpose of this project
 is for me to learn some basic web development principles, as well as to learn how
