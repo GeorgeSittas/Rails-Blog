@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
   	# Instantiates a new article with values for the title and body, which
   	# is to be saved into the database.
 
-  	@article = Article.new(title: "...", body: "...")
+  	@article = Article.new(article_params)
 
   	if @article.save
   		redirect_to @article # redirect_to forces browser to make a new request
@@ -26,5 +26,11 @@ class ArticlesController < ApplicationController
   		render :new # Renders the specified view for the current request
   	end
   end
+
+  private
+  	def article_params
+  		# Filters params in order to protect the app against malicious input
+  		params.require(:article).permit(:title, :body)
+  	end
 
 end
