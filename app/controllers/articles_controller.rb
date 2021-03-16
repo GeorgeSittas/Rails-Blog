@@ -47,6 +47,16 @@ class ArticlesController < ApplicationController
   	end
   end
 
+  def destroy
+    # Fetch the to-be-deleted article from the DB, destroy it and redirect the
+    # browser to the root path of the app
+
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to root_path
+  end
+
   private
   	def article_params
   		# Filters params in order to protect the app against malicious input
