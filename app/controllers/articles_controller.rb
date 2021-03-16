@@ -27,6 +27,26 @@ class ArticlesController < ApplicationController
   	end
   end
 
+  def edit
+  	# Fetches the to-be-edited article from the DB and stores it in @article,
+  	# so that it can be used when building the form.
+
+  	@article = Article.find(params[:id])
+  end
+
+  def update
+  	# Fetches the to-be-updated article from the DB and attempts to update it
+  	# with the (filtered) submitted data
+
+  	@article = Article.find(params[:id])
+
+  	if @article.update(article_params)
+  		redirect_to @article
+  	else
+  		render :edit
+  	end
+  end
+
   private
   	def article_params
   		# Filters params in order to protect the app against malicious input
