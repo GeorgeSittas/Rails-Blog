@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   	@article = Article.new(article_params)
 
   	if @article.save
-  		redirect_to @article # redirect_to forces browser to make a new request
+  		redirect_to @article # redirect_to causes browser to make a new request
   	else
   		render :new # Renders the specified view for the current request
   	end
