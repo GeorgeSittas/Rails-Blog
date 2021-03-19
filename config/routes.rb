@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 	# Rails provides the "resources" method which maps all of the conventional
 	# routes for a collection of _resources_, such as articles.
 
-	resources :articles
+	resources :articles do
+		resources :comments # Creates comments as a nested resource within articles
+	end
 
 end

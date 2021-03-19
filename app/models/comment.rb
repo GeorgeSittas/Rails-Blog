@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :article # Sets up an Active Record _association_
+  belongs_to :article # Declares that a comment will be associated with a single article
 end
