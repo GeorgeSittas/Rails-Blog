@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
   private
   	def article_params
   		# Filters params in order to protect the app against malicious input
-  		params.require(:article).permit(:title, :body)
+  		params.require(:article).permit(:title, :body, :status)
   	end
 
 end

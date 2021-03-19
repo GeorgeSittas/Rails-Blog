@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+	include Visible # Module which provides visibility functionality for an article
+
 	has_many :comments # Declares that an article may be associated to many comments
 
 	# 1st validation: declares that title field must be present (at least 1 non-white char)
