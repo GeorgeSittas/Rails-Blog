@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+	# We only want to allow authenticated users to delete comments
+	http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
 	def create
 		# Slightly more complicated than the ArticlesController, since we have
 		# to track the corresponding article that each comment is attached to.
