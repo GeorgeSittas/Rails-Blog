@@ -47,7 +47,7 @@ it from [here](https://nodejs.org/en/download/).
 
 ### Installing Yarn
 
-To see if Yarn is already installed in your system, run the following comamnd:
+To see if Yarn is already installed in your system, run the following command:
 
 ```
 $ yarn --version
@@ -85,4 +85,4 @@ $ bin/rails server
 ```
 
 This should start a web server process (Puma) locally on your system. At this point, you
-can type `http://localhost:3000` into your web browser to see the blog.
+can type `http://localhost:3000` into the URL field of your web browser to see the blog.
