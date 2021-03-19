@@ -5,27 +5,84 @@ is for me to learn some basic web development principles, as well as to learn ho
 to use the Ruby language and the Rails framework. The tutorial on which it's based
 can be found [here](https://guides.rubyonrails.org/getting_started.html).
 
-------
+## Dependencies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby
+- SQLite3
+- Node.js
+- Yarn
 
-Things you may want to cover:
+### Installing Ruby
 
-* Ruby version
+To see if Ruby is already installed in your system, run the following command:
 
-* System dependencies
+```
+$ ruby --version
+```
 
-* Configuration
+Rails requires Ruby version 2.5.0 or later. If the version number returned is less
+than that number (such as 2.3.7, or 1.8.7), you'll need to install a fresh copy of
+Ruby. If it's not already installed, install it from [here](https://rubyinstaller.org/).
 
-* Database creation
+### Installing SQLite3
 
-* Database initialization
+To see if SQLite3 is already installed in your system, run the following command:
 
-* How to run the test suite
+```
+$ sqlite3 --version
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+If it's not already installed, install it from [here](https://www.sqlite.org).
 
-* Deployment instructions
+### Installing Node.js
 
-* ...
+To see if Node.js is already installed in your system, run the following command:
+
+```
+$ node --version
+```
+
+Make sure that the version is greater than 8.16.0. If it's not already installed, install
+it from [here](https://nodejs.org/en/download/).
+
+### Installing Yarn
+
+To see if Yarn is already installed in your system, run the following comamnd:
+
+```
+$ yarn --version
+```
+If it's not already installed, install it from [here](https://classic.yarnpkg.com/en/docs/install).
+
+### Installing Rails
+
+To see if Rails is already installed in your system, run the following command:
+
+```
+$ rails --version
+```
+
+If it says something like 6.0.0, you're all set. If it's not already installed, you can
+install it by typing the following command:
+
+```
+$ gem install rails
+```
+
+## Installing the Blog
+
+```
+$ git clone https://github.com/GeorgeSittas/Rails-Blog
+```
+
+## Setting it up locally
+
+To get the website up and running, type the following commands in your terminal:
+
+```
+$ cd Rails-Blog
+$ bin/rails server
+```
+
+This should start a web server process (Puma) locally on your system. At this point, you
+can type `http://localhost:3000` into your web browser to see the blog.
