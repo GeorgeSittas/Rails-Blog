@@ -81,6 +81,7 @@ To get the website up and running, type the following commands in your terminal:
 
 ```
 $ cd Rails-Blog
+$ bin/rails db:migrate
 $ bin/rails server
 ```
 
