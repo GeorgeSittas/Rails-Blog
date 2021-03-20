@@ -88,3 +88,8 @@ $ bin/rails server
 
 This should start a web server process (Puma) locally on your system. At this point, you
 can type `http://localhost:3000` into the URL field of your web browser to see the blog.
+
+### Notes
+
+If an authentication window pops up, the username is "admin" and the password is "secret".
+
